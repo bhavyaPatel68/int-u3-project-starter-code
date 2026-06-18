@@ -1,6 +1,8 @@
 let team = "";
 let qualifying = "";
-let strat = "";
+let firstMove = "";
+let pitChoice = "";
+let finalMove = "";
 
 let body = document.body;
 let title = document.querySelector(".title");
@@ -9,37 +11,52 @@ let storyOpening = document.querySelector(".story-opening");
 let buttons1 = document.querySelector(".buttons-1");
 
 let optionOneScreen = document.querySelector(".option-one-screen");
-let buttons2 = document.querySelector(".buttons-2");
-
 let optionTwoScreen = document.querySelector(".option-two-screen");
+
+let buttons2 = document.querySelector(".buttons-2");
 let buttons3 = document.querySelector(".buttons-3");
 
-let optionOneEnd = document.querySelector(".option-one-end");
+let raceStart = document.querySelector(".race-start");
 let buttons4 = document.querySelector(".buttons-4");
 
-let optionTwoEnd = document.querySelector(".option-two-end");
+let midRace = document.querySelector(".mid-race");
 let buttons5 = document.querySelector(".buttons-5");
+
+let finalLaps = document.querySelector(".final-laps");
+let buttons6 = document.querySelector(".buttons-6");
 
 let aggressiveEnd = document.querySelector(".aggressive-end");
 let safeDriveEnd = document.querySelector(".safeDrive-end");
+let pitEnd = document.querySelector(".pit-end");
 let secretEnd = document.querySelector(".secret-end");
 
-let b1ptionOne = document.querySelector(".b1-option-one");
-let b1ptionTwo = document.querySelector(".b1-option-two");
+function showRaceStart() {
+    optionOneScreen.style.display = "none";
+    optionTwoScreen.style.display = "none";
+    buttons2.style.display = "none";
+    buttons3.style.display = "none";
 
-let b2ptionOne = document.querySelector(".b2-option-one");
-let b2ptionTwo = document.querySelector(".b2-option-two");
+    raceStart.style.display = "block";
+    buttons4.style.display = "block";
+}
 
-let b3ptionOne = document.querySelector(".b3-option-one");
-let b3ptionTwo = document.querySelector(".b3-option-two");
+function showMidRace() {
+    raceStart.style.display = "none";
+    buttons4.style.display = "none";
 
-let b4ptionOne = document.querySelector(".b4-option-one");
-let b4ptionTwo = document.querySelector(".b4-option-two");
+    midRace.style.display = "block";
+    buttons5.style.display = "block";
+}
 
-let b5ptionOne = document.querySelector(".b5-option-one");
-let b5ptionTwo = document.querySelector(".b5-option-two");
+function showFinalLaps() {
+    midRace.style.display = "none";
+    buttons5.style.display = "none";
 
-b1ptionOne.addEventListener("click", function () {
+    finalLaps.style.display = "block";
+    buttons6.style.display = "block";
+}
+
+document.querySelector(".b1-option-one").onclick = function () {
     team = "mclaren";
 
     body.style.backgroundColor = "#111";
@@ -53,7 +70,7 @@ b1ptionOne.addEventListener("click", function () {
     });
 
     document.querySelectorAll(
-        ".story-opening, .option-one-screen, .option-two-screen, .option-one-end, .option-two-end, .aggressive-end, .safeDrive-end, .secret-end"
+        ".story-opening, .option-one-screen, .option-two-screen, .race-start, .mid-race, .final-laps, .aggressive-end, .safeDrive-end, .pit-end, .secret-end"
     ).forEach(box => {
         box.style.backgroundColor = "#222";
         box.style.color = "white";
@@ -65,9 +82,9 @@ b1ptionOne.addEventListener("click", function () {
 
     optionOneScreen.style.display = "block";
     buttons2.style.display = "block";
-});
+};
 
-b1ptionTwo.addEventListener("click", function () {
+document.querySelector(".b1-option-two").onclick = function () {
     team = "haas";
 
     body.style.backgroundColor = "white";
@@ -81,7 +98,7 @@ b1ptionTwo.addEventListener("click", function () {
     });
 
     document.querySelectorAll(
-        ".story-opening, .option-one-screen, .option-two-screen, .option-one-end, .option-two-end, .aggressive-end, .safeDrive-end, .secret-end"
+        ".story-opening, .option-one-screen, .option-two-screen, .race-start, .mid-race, .final-laps, .aggressive-end, .safeDrive-end, .pit-end, .secret-end"
     ).forEach(box => {
         box.style.backgroundColor = "white";
         box.style.color = "black";
@@ -93,97 +110,80 @@ b1ptionTwo.addEventListener("click", function () {
 
     optionTwoScreen.style.display = "block";
     buttons3.style.display = "block";
-});
+};
 
-b2ptionOne.addEventListener("click", function () {
+document.querySelector(".b2-option-one").onclick = function () {
     qualifying = "push";
+    showRaceStart();
+};
 
-    optionOneScreen.style.display = "none";
-    buttons2.style.display = "none";
-
-    optionOneEnd.style.display = "block";
-    buttons4.style.display = "block";
-});
-
-b2ptionTwo.addEventListener("click", function () {
+document.querySelector(".b2-option-two").onclick = function () {
     qualifying = "safe";
+    showRaceStart();
+};
 
-    optionOneScreen.style.display = "none";
-    buttons2.style.display = "none";
-
-    optionTwoEnd.style.display = "block";
-    buttons5.style.display = "block";
-});
-
-b3ptionOne.addEventListener("click", function () {
+document.querySelector(".b3-option-one").onclick = function () {
     qualifying = "push";
+    showRaceStart();
+};
 
-    optionTwoScreen.style.display = "none";
-    buttons3.style.display = "none";
-
-    optionOneEnd.style.display = "block";
-    buttons4.style.display = "block";
-});
-
-b3ptionTwo.addEventListener("click", function () {
+document.querySelector(".b3-option-two").onclick = function () {
     qualifying = "safe";
+    showRaceStart();
+};
 
-    optionTwoScreen.style.display = "none";
-    buttons3.style.display = "none";
+document.querySelector(".b4-option-one").onclick = function () {
+    firstMove = "aggressive";
 
-    optionTwoEnd.style.display = "block";
-    buttons5.style.display = "block";
-});
-
-b4ptionOne.addEventListener("click", function () {
-    strat = "aggressive";
-
-    optionOneEnd.style.display = "none";
+    raceStart.style.display = "none";
     buttons4.style.display = "none";
 
     aggressiveEnd.style.display = "block";
-});
+};
 
-b5ptionOne.addEventListener("click", function () {
-    strat = "aggressive";
+document.querySelector(".b4-option-two").onclick = function () {
+    firstMove = "wait";
+    showMidRace();
+};
 
-    optionTwoEnd.style.display = "none";
+document.querySelector(".b5-option-one").onclick = function () {
+    pitChoice = "pit";
+
+    midRace.style.display = "none";
     buttons5.style.display = "none";
 
-    aggressiveEnd.style.display = "block";
-});
+    pitEnd.style.display = "block";
+};
 
+document.querySelector(".b5-option-two").onclick = function () {
+    pitChoice = "stayout";
+    showFinalLaps();
+};
 
-b4ptionTwo.addEventListener("click", function () {
-    strat = "safe";
+document.querySelector(".b6-option-one").onclick = function () {
+    finalMove = "overtake";
 
-    optionOneEnd.style.display = "none";
-    buttons4.style.display = "none";
+    finalLaps.style.display = "none";
+    buttons6.style.display = "none";
 
     if (
         team === "mclaren" &&
         qualifying === "push" &&
-        strat === "safe"
+        firstMove === "wait" &&
+        pitChoice === "stayout" &&
+        finalMove === "overtake"
     ) {
         secretEnd.style.display = "block";
     } else {
         safeDriveEnd.style.display = "block";
     }
-});
+};
 
-b5ptionTwo.addEventListener("click", function () {
-    strat = "safe";
+document.querySelector(".b6-option-two").onclick = function () {
+    finalMove = "staybehind";
 
-    optionTwoEnd.style.display = "none";
-    buttons5.style.display = "none";
+    finalLaps.style.display = "none";
+    buttons6.style.display = "none";
 
-    if (
-        team === "mclaren" &&
-        qualifying === "push" &&
-        strat === "safe"
-    ) {
-        secretEnd.style.display = "block";
-    } else {
-        safeDriveEnd.style.display = "block";
-    }
-});
+    safeDriveEnd.style.display = "block";
+};

@@ -6,80 +6,64 @@ body {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
     text-align: center;
     padding: 20px;
 }
 
 .option-one-screen,
 .option-two-screen,
-.option-one-end,
-.option-two-end,
+.race-start,
+.mid-race,
+.final-laps,
 .aggressive-end,
 .safeDrive-end,
+.pit-end,
 .secret-end,
 .buttons-2,
 .buttons-3,
 .buttons-4,
-.buttons-5 {
+.buttons-5,
+.buttons-6 {
     display: none;
 }
 
 .title {
     font-size: 3rem;
     font-weight: bold;
-    color: black;
     margin-bottom: 20px;
 }
 
 .story-opening,
 .option-one-screen,
 .option-two-screen,
-.option-one-end,
-.option-two-end,
+.race-start,
+.mid-race,
+.final-laps,
 .aggressive-end,
 .safeDrive-end,
+.pit-end,
 .secret-end {
-    background-color: white;
-    color: black;
+    background: white;
     border: 1px solid #ccc;
     border-radius: 15px;
     padding: 20px;
     max-width: 800px;
     margin: 20px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
 }
 
-.story-opening img,
-.option-one-screen img,
-.option-two-screen img,
-.option-one-end img,
-.option-two-end img,
-.aggressive-end img,
-.safeDrive-end img,
-.secret-end img {
+img {
     width: 100%;
     max-width: 600px;
     border-radius: 10px;
-}
-
-.story-opening h1,
-.option-one-screen h1,
-.option-two-screen h1,
-.option-one-end h1,
-.option-two-end h1,
-.aggressive-end h1,
-.safeDrive-end h1,
-.secret-end h1 {
-    font-size: 1.5rem;
 }
 
 .buttons-1,
 .buttons-2,
 .buttons-3,
 .buttons-4,
-.buttons-5 {
+.buttons-5,
+.buttons-6 {
     margin: 20px;
 }
 
@@ -90,13 +74,11 @@ button {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    background-color: #007bff;
     color: white;
+    background: #007bff;
     font-weight: bold;
-    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 button:hover {
-    background-color: #0056b3;
     transform: scale(1.05);
 }

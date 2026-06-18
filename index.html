@@ -1,73 +1,134 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>F1 option game</title>
-    </head>
+<head>
+    <title>F1 Story</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
-    
-    <body>
-        <!-- Add a title and edit the opening of your story. -->
-        <div class="title"> F1 Story </div>
-        <div class="story-opening">
-            <img src="assets/haasOrMclaren.png">
-            <h1>Choose your team on F1</h1>
-        </div>
+</head>
 
-        <!-- Change the text of the buttons to the options relevant to your story. -->
-        <div class="buttons-1">
-            <button class="b1-option-one">Mclaren</button>
-            <button class="b1-option-two">TGR Haas</button>
-        </div>
+<body>
 
-        <!-- Put the part of the story the user will see if they picked option one. -->
-        <div class="option-one-screen">
-            <h1>Good choice but you will need to drive well to keep your seat. Its raining during qualifying do you push for first or drive safer and make sure the car gets back in one peice.</h1>
-            <img src="assets/mclarenRain.jpg">
-        </div>
-        <div class="buttons-2">
-            <button class="b2-option-one">Push</button>
-            <button class="b2-option-two">Drive safe</button>
-        </div>
-        <!-- Put the part of the story the user will see if they picked option two. -->
-        <div class="option-two-screen">
-            <h1>Good choice your seat wont have too much competetion. Its raining during qualifying do you push for first or drive safer and make sure the car gets back in one peice.</h1>
-            <img src="assets/haasRain.jpg">
-        </div>
-        <div class="buttons-3">
-            <button class="b3-option-one">Push</button>
-            <button class="b3-option-two">Drive safe</button>
-        </div>
-        <!--Put the end of the story if the user chose option 1.-->
-        <div class="option-one-end">
-            <h1>You missed your breaking point on a corner and had a really wide line. You are P6. Lights out! Race has started and you have an oppertunity to do and aggressive overtake on the first turn.</h1>
-            <img src="assets/overtake.jpg">
-        </div>
-        <div class="buttons-4">
-            <button class="b4-option-one">Aggressive</button>
-            <button class="b4-option-two">Wait for better oppertunity</button>
-        </div>
-        <!-- Put the end of the story if the user chose option 2.-->
-        <div class="option-two-end">
-            <h1>You drove safe and got the car back in one peice but also didnt do too bad, you are P6. </h1>
-            <img src="assets/overtake.jpg">
-        </div>
-        <div class="buttons-5">
-            <button class="b5-option-one">Aggressive</button>
-            <button class="b5-option-two">Wait for better oppertunity</button>
-        </div>
-        
-        <div class="aggressive-end">
-            <h1>You chose to be aggressive and took 3 positions but got a 5 second time penalty for track limits. As the race went on you gained another position ending up with a podium well done!</h1>
-            <img src="assets/podium.png">
-        </div>
-        <div class="safeDrive-end">
-            <h1>You waited for better oppertunities and over the course of the race gained 4 positions ending up with a podium well done! </h1>
-            <img src="assets/podium.png">
-        </div>
-        <div class="secret-end">
-            <h1>McLaren notices your patience and racecraft. You avoid chaos, save your tires, and win your first Grand Prix!</h1>
-            <img src="https://pbs.twimg.com/media/GM2IBuZWcAE87kB.jpg">
-        </div>
-    </body>
+    <div class="title">F1 Story</div>
+
+    <div class="story-opening">
+        <img src="assets/haasOrMclaren.png">
+        <h1>Choose your F1 team.</h1>
+    </div>
+
+    <div class="buttons-1">
+        <button class="b1-option-one">McLaren</button>
+        <button class="b1-option-two">TGR Haas</button>
+    </div>
+
+    <!-- Team Choice -->
+
+    <div class="option-one-screen">
+        <h1>
+            Good choice, but you'll need to drive well to keep your seat.
+            It's raining during qualifying. Do you push for pole position or drive safely?
+        </h1>
+        <img src="assets/mclarenRain.jpg">
+    </div>
+
+    <div class="buttons-2">
+        <button class="b2-option-one">Push</button>
+        <button class="b2-option-two">Drive Safe</button>
+    </div>
+
+    <div class="option-two-screen">
+        <h1>
+            Good choice. Competition for your seat isn't too high.
+            It's raining during qualifying. Do you push for pole or drive safely?
+        </h1>
+        <img src="assets/haasRain.jpg">
+    </div>
+
+    <div class="buttons-3">
+        <button class="b3-option-one">Push</button>
+        <button class="b3-option-two">Drive Safe</button>
+    </div>
+
+    <!-- Race Start -->
+
+    <div class="race-start">
+        <h1>
+            You qualify P6. The lights go out and the race begins.
+            Into Turn 1 you have a chance to make an aggressive move.
+        </h1>
+        <img src="assets/overtake.jpg">
+    </div>
+
+    <div class="buttons-4">
+        <button class="b4-option-one">Aggressive Overtake</button>
+        <button class="b4-option-two">Wait For Better Opportunity</button>
+    </div>
+
+    <!-- Mid Race -->
+
+    <div class="mid-race">
+        <h1>
+            Lap 28. Your team comes on the radio.
+            Your tires are wearing out and they recommend pitting for fresh tires.
+            Do you pit or stay out and try to gain track position?
+        </h1>
+        <img src="https://www.topgear.com/sites/default/files/2023/10/A-McLaren-Qatar-World-Record-Pit-Stop.jpg">
+    </div>
+
+    <div class="buttons-5">
+        <button class="b5-option-one">Pit For New Tires</button>
+        <button class="b5-option-two">Stay Out</button>
+    </div>
+
+    <!-- Final Overtake -->
+
+    <div class="final-laps">
+        <h1>
+            Five laps remain. You're right behind the car ahead.
+            This may be your final chance to gain a position.
+        </h1>
+        <img src="https://i.redd.it/7vsxuxdpdc5a1.jpg">
+    </div>
+
+    <div class="buttons-6">
+        <button class="b6-option-one">Overtake</button>
+        <button class="b6-option-two">Stay Behind</button>
+    </div>
+
+    <!-- Endings -->
+
+    <div class="aggressive-end">
+        <h1>
+            You attacked early and picked up a penalty.
+            Despite strong pace, the penalty drops you to P3.
+            Still a podium finish!
+        </h1>
+        <img src="assets/podium.png">
+    </div>
+
+    <div class="safeDrive-end">
+        <h1>
+            You drove a smart race and brought home valuable points.
+            You finish P4 after a solid performance.
+        </h1>
+        <img src="assets/podium.png">
+    </div>
+
+    <div class="pit-end">
+        <h1>
+            The pit stop gives you fresh tires but costs valuable track position.
+            You recover to P5 and score good points for the team.
+        </h1>
+        <img src="assets/podium.png">
+    </div>
+
+    <div class="secret-end">
+        <h1>
+            Perfect race strategy! You stayed patient at Turn 1, ignored the pit call,
+            preserved your tires, and made the winning move in the closing laps.
+            You take your first Formula 1 victory and become an overnight superstar!
+        </h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEDVblUdA52Qy-PmGSvreoZPcf9HKsxCcQIfByo9619QcR7bGT0tAqhe8&s=10">
+    </div>
+
+</body>
 </html>
