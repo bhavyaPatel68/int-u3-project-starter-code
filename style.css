@@ -18,6 +18,7 @@ body {
 .option-two-end,
 .aggressive-end,
 .safeDrive-end,
+.secret-end,
 .buttons-2,
 .buttons-3,
 .buttons-4,
@@ -38,7 +39,8 @@ body {
 .option-one-end,
 .option-two-end,
 .aggressive-end,
-.safeDrive-end {
+.safeDrive-end,
+.secret-end {
     background-color: white;
     color: black;
     border: 1px solid #ccc;
@@ -55,7 +57,8 @@ body {
 .option-one-end img,
 .option-two-end img,
 .aggressive-end img,
-.safeDrive-end img {
+.safeDrive-end img,
+.secret-end img {
     width: 100%;
     max-width: 600px;
     border-radius: 10px;
@@ -67,7 +70,8 @@ body {
 .option-one-end h1,
 .option-two-end h1,
 .aggressive-end h1,
-.safeDrive-end h1 {
+.safeDrive-end h1,
+.secret-end h1 {
     font-size: 1.5rem;
 }
 
