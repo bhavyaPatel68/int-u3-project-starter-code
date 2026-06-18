@@ -1,109 +1,98 @@
-/* When someone enters your game, you only want them to see the opening and the option buttons. The code below will use the display property to hide certain parts of the story. Remove the comments from the code below when you're ready for that step!*/
-
-/* 
-.option-one-screen, 
-.option-two-screen, 
-.option-one-end, 
-.option-two-end  {
-   display:none;
-}
-*/
-
-
-/* Feel free to change any of the styling below!*/
 html,
 body {
     margin: 0;
     padding: 0;
 }
 
-/* Style the body with a background color or image if desired */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color: white;
+    color: black;
     text-align: center;
     padding: 20px;
 }
 
-/* Style the title of your story */
+.option-one-screen,
+.option-two-screen,
+.option-one-end,
+.option-two-end,
+.aggressive-end,
+.safeDrive-end,
+.buttons-2,
+.buttons-3,
+.buttons-4,
+.buttons-5 {
+    display: none;
+}
+
 .title {
-    font-size: 24px;
+    font-size: 3rem;
     font-weight: bold;
+    color: black;
     margin-bottom: 20px;
 }
 
-/* Style the story opening container */
-.story-opening {
-    background-color: #fff;
+.story-opening,
+.option-one-screen,
+.option-two-screen,
+.option-one-end,
+.option-two-end,
+.aggressive-end,
+.safeDrive-end {
+    background-color: white;
+    color: black;
     border: 1px solid #ccc;
+    border-radius: 15px;
     padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.story-opening img,
+.option-one-screen img,
+.option-two-screen img,
+.option-one-end img,
+.option-two-end img,
+.aggressive-end img,
+.safeDrive-end img {
+    width: 100%;
+    max-width: 600px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Style the story image */
-.story-opening img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+.story-opening h1,
+.option-one-screen h1,
+.option-two-screen h1,
+.option-one-end h1,
+.option-two-end h1,
+.aggressive-end h1,
+.safeDrive-end h1 {
+    font-size: 1.5rem;
 }
 
-/* Style the story opening message */
-.story-opening h1 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-/* Style the buttons container */
-.buttons {
+.buttons-1,
+.buttons-2,
+.buttons-3,
+.buttons-4,
+.buttons-5 {
     margin: 20px;
 }
 
-/* Style the option buttons */
 button {
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 18px;
+    padding: 12px 24px;
     margin: 10px;
-    background-color: #007bff;
-    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 button:hover {
     background-color: #0056b3;
-}
-
-/* Style the screens for option one and option two */
-.option-one-screen,
-.option-two-screen,
-.option-one-end,
-.option-two-end {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
-}
-
-/* Style the images in the screens */
-.option-one-screen img,
-.option-two-screen img,
-.option-one-end img,
-.option-two-end img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-/* Style the text in the screens */
-.option-one-screen h1,
-.option-two-screen h1,
-.option-one-end h1,
-.option-two-end h1 {
-    font-size: 20px;
-    margin-bottom: 20px;
+    transform: scale(1.05);
 }
