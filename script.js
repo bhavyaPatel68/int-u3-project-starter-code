@@ -6,6 +6,8 @@ let finalMove = "";
 
 let body = document.body;
 let title = document.querySelector(".title");
+let nameInput = document.querySelector(".name-input");
+let nameSubmit = document.querySelector(".name-submit");
 
 let storyOpening = document.querySelector(".story-opening");
 let buttons1 = document.querySelector(".buttons-1");
@@ -186,4 +188,15 @@ document.querySelector(".b6-option-two").onclick = function () {
     buttons6.style.display = "none";
 
     safeDriveEnd.style.display = "block";
+};
+
+nameSubmit.onclick = function () {
+    let rawName = nameInput.value.trim();
+    if (rawName.length === 0) {
+        return;
+    }
+    let newTitle = `${rawName}'s F1 Story`;
+    title.textContent = newTitle;
+    document.title = newTitle;
+    document.querySelector('.name-entry').style.display = 'none';
 };
